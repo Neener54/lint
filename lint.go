@@ -192,7 +192,6 @@ type file struct {
 func (f *file) isTest() bool { return strings.HasSuffix(f.filename, "_test.go") }
 
 func (f *file) lint() {
-	f.lintPackageComment()
 	f.lintImports()
 	f.lintBlankImports()
 	f.lintExported()
